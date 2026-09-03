@@ -1,0 +1,52 @@
+{
+  "id": "mcrows",
+  "title": "Minimal Crows",
+  "description": "A minimal crows implementation",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": 14,
+    "verified": 14
+  },
+  "authors": [{
+    "name": "me"
+  }],
+  "esmodules": ["module/mcrows.mjs"],
+  "styles": ["styles/system-styles.css"],
+  "packs": [{
+    "name": "monsters",
+    "label": "Crows Monsters",
+    "type": "Actor"
+  },
+  {
+    "name": "items",
+    "label": "Crows Items",
+    "type": "Item"
+  }],
+  "languages": [{
+    "lang": "en",
+    "name": "English",
+    "path": "lang/en.json"
+  }],
+  "documentTypes": {
+    "Actor": {
+      "hero": { "htmlFields": ["background.biography"] },
+      "villain": { "htmlFields": ["background.biography"] },
+      "pawn": {}
+    },
+    "Item": {
+      "weapon": {},
+      "spell": {}
+    }
+  },
+  "socket": false,
+  "initiative": "1d10",
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "resources.stamina",
+  "secondaryTokenAttribute": "resources.wounds",
+  "url": "https://github.com/mefron/mcrows",
+  "manifest": "https://github.com/mefron/mcrows/system.json",
+  "download": "https://github.com/mefron/mcrows/mcrows.zip"
+}
