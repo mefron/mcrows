@@ -47,6 +47,6 @@
   "primaryTokenAttribute": "resources.stamina",
   "secondaryTokenAttribute": "resources.wounds",
   "url": "https://github.com/mefron/mcrows",
-  "manifest": "https://github.com/mefron/mcrows/system.json",
-  "download": "https://github.com/mefron/mcrows/mcrows.zip"
+  "manifest": "https://github.com/mefron/mcrows/releases/download/v0.0.1/system.json",
+  "download": "https://github.com/mefron/mcrows/releases/download/v0.0.1/mcrows-v0.0.1.zip"
 }
