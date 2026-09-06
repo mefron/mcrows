@@ -64,5 +64,18 @@ gh release create "v${version}" \
   ${filename} \
   system.json
 
+echo "Updating current release"
+git tag -f current
 
-#${zip_tool} ${filename} add_dir images add_dir lang add_dir module add_dir packs add_dir styles add_file system.json system.json 0 0 add_file mcrows.json mcrows.json 0 0
+rm -f ${archive_dir}/mcrows.zip
+cp ${filename} ${archive_dir}/mcrows.zip
+
+gh release delete current -y
+
+gh release create "current" \
+  --latest \
+  --title "current"  \
+  --generate-notes \
+  ${archive_dir}/mcrows.zip \
+  system.json
+

@@ -13,8 +13,6 @@
     }
   ],
   "esmodules": [
-    "module/mcrows.mjs",
-    "module/data-model.mjs"
   ],
   "styles": [
     "styles/system-styles.css"
