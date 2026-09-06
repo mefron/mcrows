@@ -42,11 +42,27 @@ add_file() {
 	${zip_tool} ${filename} add_file ${filepath} ${filepath} 0 0
 }
 
+echo "Updating system.json"
+mv system.json system.json.old
+jq --arg version "v${version}" '.version = $version' system.json.old > system.json
+
+git add system.json
+git commit -m "Updated version number"
+
 echo "Creating ${filename}"
 ${zip_tool} -n ${filename}
 
 for dir in ${release_dirs}; do
 	add_dir ${dir}
 done
+
+git tag "v${version}"
+git push origin "v${version}"
+gh release create "v${version}" \
+  --title "v${version}"  \
+  --generate-notes \
+  ${filename} \
+  system.json
+
 
 #${zip_tool} ${filename} add_dir images add_dir lang add_dir module add_dir packs add_dir styles add_file system.json system.json 0 0 add_file mcrows.json mcrows.json 0 0
