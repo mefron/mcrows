@@ -13,6 +13,7 @@
     }
   ],
   "esmodules": [
+    "module/mcrows.mjs",
     "module/data-model.mjs"
   ],
   "styles": [
@@ -44,11 +45,7 @@
           "background.biography"
         ]
       },
-      "creature": {
-        "htmlFields": [
-          "background.biography"
-        ]
-      }
+      "creature": {}
     },
     "Item": {
       "inv": {}
