@@ -2,7 +2,7 @@
   "id": "mcrows",
   "title": "Minimal Crows",
   "description": "A minimal crows implementation",
-  "version": "v0.0.4",
+  "version": "v0.0.5",
   "compatibility": {
     "minimum": 14,
     "verified": 14
@@ -12,7 +12,10 @@
       "name": "mefron"
     }
   ],
-  "esmodules": ["module/data-model.mjs"],
+  "esmodules": [
+    "module/mcrows.mjs",
+    "module/data-model.mjs"
+  ],
   "styles": [
     "styles/system-styles.css"
   ],
@@ -42,11 +45,7 @@
           "background.biography"
         ]
       },
-      "creature": {
-        "htmlFields": [
-          "background.biography"
-        ]
-      }
+      "creature": {}
     },
     "Item": {
       "inv": {}
