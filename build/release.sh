@@ -56,6 +56,9 @@ for dir in ${release_dirs}; do
 	add_dir ${dir}
 done
 
+${zip_tool} ${filename} add_file system.json system.json 0 0
+${zip_tool} ${filename} add_file mcrows.json mcrows.json 0 0
+
 git tag "v${version}"
 git push origin "v${version}"
 gh release create "v${version}" \

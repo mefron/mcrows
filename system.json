@@ -12,7 +12,7 @@
       "name": "mefron"
     }
   ],
-  "esmodules": [],
+  "esmodules": ["module/data-model.mjs"],
   "styles": [
     "styles/system-styles.css"
   ],
