@@ -19,7 +19,7 @@ class CrowData extends CharacterData {
 		return {
 			...super.defineSchema(),
 			background: new SchemaField({
-				biography: new HTMLField()
+				biography: new HTMLField({ required: true, blank: true })
 			}),
 			traits: new ArrayField(new StringField()),
 			expertise: new ArrayField(new StringField()),
@@ -39,9 +39,7 @@ class CreatureData extends CharacterData {
 				options: ["blood", "undead"],
 				initial: "blood"
 			}),
-			power: new SchemaField({
-				value: new NumberField({ required: true, integer: true, min: 1, initial: 1, max: 5 })
-			}),
+			power: new NumberField({ required: true, integer: true, min: 1, initial: 1, max: 5 })
 		};
 	}
 }

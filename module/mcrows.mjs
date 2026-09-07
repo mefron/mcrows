@@ -1,4 +1,21 @@
 Hooks.on("init", () => {
-  CONFIG.Actor.dataModels.crow = CrowData;
-  CONFIG.Actor.dataModels.creature = CreatureData;
+	console.log("Initializing MCrows");
+
+	CONFIG.Actor.dataModels = {
+		crow: CrowData,
+		creature: CreatureData
+	}
+
+	CONFIG.Actor.trackableAttributes = {
+		crow: {
+			bar: ["stamina"],
+			value: ["total_xp"]
+		},
+		creature: {
+			bar: ["stamina"],
+			value: ["power"]
+		}
+	};
+
+	console.log("MCrows Initialization complete");
 });
