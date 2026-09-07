@@ -14,7 +14,7 @@ class CharacterData extends foundry.abstract.TypeDataModel {
 	}
 }
 
-class CrowData extends CharacterData {
+export class CrowData extends CharacterData {
 	static defineSchema() {
 		return {
 			...super.defineSchema(),
@@ -29,7 +29,7 @@ class CrowData extends CharacterData {
 	}
 }
 
-class CreatureData extends CharacterData {
+export class CreatureData extends CharacterData {
 	static defineSchema() {
 		return {
 			...super.defineSchema(),
