@@ -2,7 +2,7 @@
   "id": "mcrows",
   "title": "Minimal Crows",
   "description": "A minimal crows implementation",
-  "version": "v0.0.12",
+  "version": "v0.0.13",
   "compatibility": {
     "minimum": 14,
     "verified": 14
@@ -47,10 +47,12 @@
         ]
       },
       "creature": {
-		"htmlFields": [
-			"type", "size", "power"
-		]
-	  }
+        "htmlFields": [
+          "type",
+          "size",
+          "power"
+        ]
+      }
     },
     "Item": {
       "inv": {}
