@@ -1,4 +1,4 @@
-import { CrowData, CreatureData } from "./module/data-model.mjs"
+import { CrowData, CreatureData } from "data-model.mjs"
 
 Hooks.on("init", () => {
 	console.log("Initializing MCrows");
