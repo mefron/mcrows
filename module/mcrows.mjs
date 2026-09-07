@@ -1,7 +1,11 @@
+import { SystemActor, SystemItem } from "./document.mjs"
 import { CrowData, CreatureData } from "./data-model.mjs"
 
 Hooks.on("init", () => {
 	console.log("Initializing MCrows");
+
+	CONFIG.Actor.documentClass = SystemActor;
+	CONFIG.Item.documentClass = SystemItem;
 
 	CONFIG.Actor.dataModels = {
 		crow: CrowData,
@@ -19,5 +23,5 @@ Hooks.on("init", () => {
 		}
 	};
 
-	console.log("MCrows Initialization complete");
+	console.log("MCrows initialization complete");
 });

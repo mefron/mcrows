@@ -36,10 +36,18 @@ export class CreatureData extends CharacterData {
 			type: new StringField({
 				required: true,
 				blank: false,
-				options: ["blood", "undead"],
+				options: ["angel", "blood", "demon", "plant", "undead", "unique"],
 				initial: "blood"
 			}),
-			power: new NumberField({ required: true, integer: true, min: 1, initial: 1, max: 5 })
+			size: new StringField({
+				required: true,
+				blank: false,
+				options: ["tiny", "small", "medium", "large", "huge", "holy_shit"],
+				initial: "medium"
+			}),
+			power: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 100 }),
+			likes: new ArrayField(new StringField()),
+			hate: new ArrayField(new StringField())
 		};
 	}
 }

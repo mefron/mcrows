@@ -13,6 +13,7 @@
     }
   ],
   "esmodules": [
+    "module/document.mjs",
     "module/data-model.mjs",
     "module/mcrows.mjs"
   ],
@@ -45,7 +46,11 @@
           "background.biography"
         ]
       },
-      "creature": {}
+      "creature": {
+		"htmlFields": [
+			"type", "size", "power"
+		]
+	  }
     },
     "Item": {
       "inv": {}
