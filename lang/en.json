@@ -1,8 +1,19 @@
 {
-  "TYPES": {
-    "Actor": {
-      "crow": "Crow",
-      "creature": "Creature"
-    }
-  }
+	"TYPES": {
+		"Actor": {
+			"crow": "Crow",
+			"creature": "Creature"
+		}
+	},
+
+	"MCROWS": {
+		"STAMINA": {
+			"label": "Stamina",
+			"abbr": "stm"
+		},
+		"TOTAL_XP": {
+			"label": "Total Experience",
+			"abbr": "txp"
+		}
+	}
 }

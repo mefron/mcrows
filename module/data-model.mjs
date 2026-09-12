@@ -8,7 +8,8 @@ class CharacterData extends foundry.abstract.TypeDataModel {
 			stamina: new SchemaField({
 				value: new NumberField({ required: true, integer: true, min: 0, initial: 10 }),
 				min: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
-				max: new NumberField({ required: true, integer: true, min: 0, initial: 10 })
+				max: new NumberField({ required: true, integer: true, min: 0, initial: 10 }),
+				label: "MCROWS.STAMINA.label"
 			}),
 		};
 	}
@@ -23,7 +24,8 @@ export class CrowData extends CharacterData {
 			}),
 			traits: new ArrayField(new StringField()),
 			expertise: new ArrayField(new StringField()),
-			total_xp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+			total_xp: new NumberField({ required: true, integer: true, min: 0, initial: 0,
+				label: "MCROWS.TOTAL_XP.label" }),
 			unspent_xp: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
 		};
 	}
