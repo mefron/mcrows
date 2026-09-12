@@ -8,8 +8,7 @@ class CharacterData extends foundry.abstract.TypeDataModel {
 			stamina: new SchemaField({
 				value: new NumberField({ required: true, integer: true, min: 0, initial: 10 }),
 				min: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
-				max: new NumberField({ required: true, integer: true, min: 0, initial: 10 }),
-				label: "MCROWS.STAMINA.label"
+				max: new NumberField({ required: true, integer: true, min: 0, initial: 10 })
 			}),
 		};
 	}
